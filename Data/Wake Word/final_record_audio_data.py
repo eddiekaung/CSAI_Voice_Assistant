@@ -88,14 +88,14 @@ while (quit_inp != 'q'):
                                 curr_time = time.strftime("%m%d%Y%H%M%S", time.localtime())
 
                                 if (feat_type == "ww"):
-                                        file_name = "ww_" + gender + "_" + ww_descr + "_" + ww_loc + "_" + ww_noise + "_" + last_name + "_" + first_name + "_" + curr_time + "_ewenike.wav"
+                                        file_name = "ww_" + gender + "_" + ww_descr + "_" + ww_loc + "_" + ww_noise + "_" + last_name + "_" + first_name + "_" + curr_time + "_aung.wav"
 
                                 else:
-                                        file_name = "notww_" + nww_descr + "_" + nww_loc + "_" + nww_noise + "_" + curr_time + "_ewenike.wav"
+                                        file_name = "notww_" + nww_descr + "_" + nww_loc + "_" + nww_noise + "_" + curr_time + "_aung.wav"
 
                                 print(file_name + " has been saved.")
 
-                                wf = wave.open(os.getcwd() + "\\" + target_dir + "\\" + file_name, 'wb')
+                                wf = wave.open(os.getcwd() + "/" + target_dir + "/" + file_name, 'wb')
                                 wf.setnchannels(CHANNELS)
                                 wf.setsampwidth(p.get_sample_size(FORMAT))
                                 wf.setframerate(RATE)
@@ -133,11 +133,11 @@ while (quit_inp != 'q'):
 
                         curr_time = time.strftime("%m%d%Y%H%M%S", time.localtime())
 
-                        file_name = "notww_" + nww_descr + "_" + nww_loc + "_" + nww_noise + "_" + curr_time + "_ewenike.wav"
+                        file_name = "notww_" + nww_descr + "_" + nww_loc + "_" + nww_noise + "_" + curr_time + "_aung.wav"
 
                         print(file_name + " has been saved.")
 
-                        wf = wave.open(os.getcwd() + "\\" + target_dir + "\\" + file_name, 'wb')
+                        wf = wave.open(os.getcwd() + "/" + target_dir + "/" + file_name, 'wb')
                         wf.setnchannels(CHANNELS)
                         wf.setsampwidth(p.get_sample_size(FORMAT))
                         wf.setframerate(RATE)
